@@ -1,0 +1,6 @@
+VERSION=$(dnf list installed | grep libartik-sdk-base.armv7hl | awk '{print $2}')
+if [[ $VERSION ]]; then
+    echo $VERSION
+else
+    echo "Not installed"
+fi
